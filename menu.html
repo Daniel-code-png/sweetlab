@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENÚ | SWEETLAB</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Importar fuente moderna y legible */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce4ec; /* Fondo Rosa Pastel Suave */
+        }
+        
+        /* ---------------------------------- */
+        /* PALETA DE COLORES SWEETLAB (PINK)  */
+        /* ---------------------------------- */
+        .color-primary {
+            background-color: #E91E63; /* Deep Pink (Rosa Principal) */
+        }
+        .color-primary-hover:hover {
+            background-color: #C2185B; /* Darker Pink */
+        }
+        .text-primary {
+            color: #E91E63;
+        }
+        
+        /* Estilos específicos para el Menú */
+        .menu-header {
+            background-color: #E91E63; /* Fondo de la banda del título */
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed #fce4ec; /* Línea punteada suave */
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .menu-grid {
+             grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <h1 class="text-xl sm:text-3xl font-extrabold text-primary flex items-center">
+                <span role="img" aria-label="Pastel" class="mr-2 text-3xl sm:text-4xl">🍰</span>
+                SWEETLAB | Menú
+            </h1>
+            <a href="index.html" class="text-sm font-semibold text-gray-600 hover:text-primary transition duration-300">
+                ← Volver a Inicio
+            </a>
+            
+            </div>
+    </header>
+
+---
+    <section id="menu" class="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h3 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-12 text-center">
+                🍰 Nuestro Delicioso Menú 🍨
+            </h3>
+
+            <div class="hidden lg:block absolute top-0 left-0 w-48 h-48 bg-pink-100 rounded-br-[100px] opacity-70"></div>
+            <div class="hidden lg:block absolute bottom-0 right-0 w-64 h-64 bg-pink-100 rounded-tl-[150px] opacity-70"></div>
+
+            <div class="relative bg-white p-6 sm:p-10 rounded-3xl shadow-2xl shadow-pink-200/50 border border-pink-200">
+                
+                <div class="mb-8">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 menu-grid">
+
+                    <div class="relative p-4 bg-gray-50 rounded-xl">
+                        <h4 class="text-2xl font-bold menu-header mb-4 mt-[-20px] ml-[-15px]">MALTEADAS</h4>
+                        <ul class="text-lg text-gray-800">
+                            <li class="menu-item">Chocoloco <span class="font-semibold text-primary">$10</span></li>
+                            <li class="menu-item">Rosita fresita <span class="font-semibold text-primary">$10</span></li>
+                            <li class="menu-item">Oreo <span class="font-semibold text-primary">$10</span></li>
+                            <li class="menu-item">Maracumango <span class="font-semibold text-primary">$10</span></li>
+                            <li class="menu-item">Frambuesa <span class="font-semibold text-primary">$10</span></li>
+                            <li class="menu-item">Macarons <span class="font-semibold text-primary">$10</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative p-4 bg-gray-50 rounded-xl">
+                        <h4 class="text-2xl font-bold menu-header mb-4 mt-[-20px] ml-[-15px]">POSTRES</h4>
+                        <ul class="text-lg text-gray-800">
+                            <li class="menu-item">Cheesecake de oreo <span class="font-semibold text-primary">$12</span></li>
+                            <li class="menu-item">Red velvet <span class="font-semibold text-primary">$14</span></li>
+                            <li class="menu-item">Tiramisú <span class="font-semibold text-primary">$15</span></li>
+                            <li class="menu-item">Brownies <span class="font-semibold text-primary">$10</span></li>
+                            <li class="menu-item">Mochis <span class="font-semibold text-primary">$20</span></li>
+                            <li class="menu-item">Alfajores <span class="font-semibold text-primary">$16</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative p-4 bg-gray-50 rounded-xl md:col-span-2 lg:col-span-1">
+                        <h4 class="text-2xl font-bold menu-header mb-4 mt-[-20px] ml-[-15px]">SALUDABLES</h4>
+                        <ul class="text-lg text-gray-800">
+                            <li class="menu-item">Pastel de zanahoria <span class="font-semibold text-primary">$18</span></li>
+                            <li class="menu-item">Galleta de avena nueces <span class="font-semibold text-primary">$8</span></li>
+                            <li class="menu-item">Panna cotta de coco <span class="font-semibold text-primary">$25</span></li>
+                            <li class="menu-item">Bowl de arándanos y yogur griego <span class="font-semibold text-primary">$25</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+---    
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-base sm:text-lg mb-4 italic">
+                "Nada nos alegra más que ver nuestros postres en tus momentos especiales. Gracias por hacernos parte de tus celebraciones y por permitirnos compartir lo que más amamos hacer."
+            </p>
+            <p class="text-sm text-gray-400">
+                © 2024 SWEETLAB. ¡MUCHAS GRACIAS!
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
