@@ -1,0 +1,427 @@
+/* Importar fuentes bonitas para un toque más artesanal */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+
+/* Base y Reset */
+body {
+    font-family: 'Quicksand', sans-serif; /* Fuente más amigable y moderna, sin cursiva */
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec; /* Fondo Rosa Pastel Suave */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evitar scroll horizontal por decoraciones */
+}
+
+/* Decoración general del body con un patrón sutil (reducida opacidad) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmVkZjAiIGZpbGwtb3BhY2l0eT0iMC41MiI+PHBhdGggZD0iTTQwIDM2LjE3NkwyMCAxNiAyMCAwIDQwIDAgNDAgMzYuMTc2em0wLTMyLjI5N0wyMy40NzggMEww 0gMCAyLjI3MiAxNi4xNDggMjAuMjY3IDIwLjA5MyAxNi4xNzggMjIgMCAyMiAwIDIwIDQwIDIwIDQwIDMuODc5ek0wIDI2LjE2NUwwIDI0IDIuMzY0IDIyLjI1OCA2LjAzIDI3LjI2NyAxNi4wODMgMzIuOTY3IDIzLjQ5NiAzNS4xODMgMjUuNTg5IDM2LjE5NCA0MCAzNi4xOTQgNDAgMzkuMTg1IDIwIDQwIDIwIDQwIDIwIDQwIDIwIDQwIDIwIDQwIDAgNDAgMCAzNi4xOTR6TTAgNDBsMTcuMjQxLTEuNzA2TDIzLjI5IDQwIDAgNDB6Ii8+PC9nPg0KPC9zdmc+');
+    background-repeat: repeat;
+    opacity: 0.1; /* MUY BAJA OPACIDAD para que no interfiera */
+    z-index: -1; /* Detrás del contenido */
+    pointer-events: none; /* Para que no interfiera con interacciones */
+}
+
+
+/* Tipografía y Estilo de Texto */
+h1 {
+    font-family: 'Quicksand', sans-serif; /* Cambiado a Quicksand, sin cursiva */
+    font-size: 3.2em; /* Ajuste de tamaño */
+    color: #e91e63; /* Rosa Fuerte para Títulos */
+    text-align: center;
+    margin-top: 0.5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra sutil */
+    font-weight: 700; /* Más negrita para destacar */
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.7em;
+    color: #c2185b;
+    text-align: center;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif; /* Cambiado a Quicksand, sin cursiva */
+    font-size: 2.2em; /* Ajuste de tamaño */
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    font-weight: 700;
+}
+
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4em;
+    color: #880e4f;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #ffb6c1; /* Rosa más intenso para la barra */
+    color: #880e4f;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Quicksand', sans-serif; /* Logo sin cursiva */
+    font-size: 2em; /* Más grande */
+    font-weight: 700; /* Más negrita */
+    color: #880e4f;
+}
+
+.desktop-nav a {
+    font-family: 'Quicksand', sans-serif;
+    color: #880e4f;
+    text-decoration: none;
+    margin-left: 25px;
+    padding: 8px 15px;
+    border-radius: 20px; /* Bordes más redondeados */
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+.desktop-nav a:hover {
+    background-color: #f8bbd0;
+    color: #c2185b;
+}
+
+/* Menú Móvil (Hamburguesa) */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    color: #880e4f;
+    font-size: 1.8em; /* Ícono más grande */
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #ffb6c1;
+    text-align: center;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav a {
+    font-family: 'Quicksand', sans-serif;
+    color: #880e4f;
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8bbd0;
+    transition: background-color 0.3s;
+}
+
+.mobile-nav a:hover {
+    background-color: #f8bbd0;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+    background-color: #fff8e1; /* Fondo sólido para el hero */
+    background-image: url('sweetlab-hero-bg.jpg'); /* REEMPLAZAR con una imagen de alta calidad de postres */
+    background-size: cover;
+    background-position: center;
+    padding: 120px 5%; /* Más padding vertical */
+    text-align: center;
+    color: #4e342e; /* Marrón para contraste */
+    position: relative;
+    overflow: hidden; /* Para que las decoraciones no se salgan */
+}
+
+/* Decoraciones de pastelitos y fresas en el hero */
+.hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.hero::before { /* Pastelito en la esquina superior izquierda */
+    top: 10%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDOS42NzcgMiA3Ljg2MiAzLjg2MiA3Ljg2MiA2LjE4NUE3LjAwNiA3LjAwNiAwIDAgMCAxMiAxMy40MzhMNy4wOTcgMjJIMTYuOTAyTDEyIDEzLjQzOEExMi4wMTIgMTIuMDEyIDAgMCAwIDE2LjEzOCA2LjE4NUMxNi4xMzggMy44NjIgMTQuMzIzIDIgMTIgMloiIGZpbGw9IiNmZjcwOTkiLz4KPC9zdmc+'); /* Ícono de pastel */
+    background-size: contain;
+    transform: rotate(-15deg);
+}
+
+.hero::after { /* Fresa en la esquina inferior derecha */
+    bottom: 10%;
+    right: 8%;
+    width: 60px;
+    height: 60px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcgMTMuMzg2QzQuOTg2IDEzLjM4NiAzLjQxNSAxMS44MTYgMy40MTUgOS44MDJDMy40MTUgNy43ODggNC45ODYgNi4yMTcgNyA2LjIxN0M5LjAxNCA2LjIxNyAxMC41ODYgNy43ODggMTAuNTg2IDkuODAyc0U2LjAzMyAxNy43ODcgNyAxNy43ODdNMTEuOTE1IDEyLjQxNEMxMC42NzUgMTIuNDE0IDkuNjg2IDExLjQyNSA5LjY4NiAxMC4xODVzLjk4OS0yLjI3OCAyLjI2NC0yLjI3OGMxLjQ5NiAwIDIuNzE0IDEuNDI5IDIuNzE0IDIuOTE4IDAgLjgyOS0uMzM4IDEuNTU2LS43NzkgMi4yOTFjLS44MDIgMS40NDEtMi40NjYgMi4yNzgtNC4xODEgMi4yNzhNMTcgMTguMzg2QzE1Ljk4NiAxOC4zODYgMTUuNDEzIDE3LjYxNiAxNS40MTMgMTYuMjc1cy40MTMtMS40MjkgMS42MDktMS40MjlzMS4zMjMuNzE0IDEuMzIzIDEuNDI5LTEuMzUgMS40MjktMi42NzUgMS40Mjkiem0tNC44NzUtMy40MjZjLTEuNDM2IDAtMi41NjktMS4xMzMtMi41NjktMi41NjlsMC0uMTU4YzAtMS40MzYgMS4xMzMtMi41NjkgMi41NjktMi41NjkgMi41NjkgMCAyLjU2OSAyLjcyNyAyLjU2OSAyLjcyN0wxNC42OTIgMTQuOTZMMTQuNjA2IDE0LjU5NkMxMy4zMjYgMTQuOTYgMTIuMTkyIDEzLjc4MiAxMi4xOTIgMTIuMzU2eiIgZmlsbD0iI0Y0NDMzNiIvPgo8cGF0aCBkPSJNMTEuMDk0IDYuMDY1VjcuMjc1QzEyLjgyNiA3LjMyMiAxNCA3LjQ1NSAxNCA3Ljc1NHM0LjQzOC01LjQyNSA2LTcuOTIzTTE3IDEuN3oiIGZpbGw9IiM2NjBBQjIiLz4KPC9zdmc+'); /* Ícono de fresa */
+    background-size: contain;
+    transform: rotate(20deg);
+}
+
+.hero h1 {
+    font-size: 3.2em; /* Ajustado */
+    color: #e91e63;
+}
+
+.hero h2 {
+    font-size: 1.7em; /* Ajustado */
+    color: #c2185b;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+    color: #4e342e;
+}
+
+.founders {
+    font-size: 0.9em;
+    font-style: normal; /* Asegurar que no sea cursiva */
+    color: #880e4f;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e91e63;
+    color: white;
+    padding: 12px 25px; /* Botón más grande */
+    text-decoration: none;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: bold;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #c2185b;
+    transform: translateY(-3px); /* Efecto al pasar el mouse */
+}
+
+/* Contenido General */
+.content-section {
+    padding: 40px 5%;
+    margin: 20px auto; /* Centrar secciones */
+    max-width: 1000px; /* Limitar ancho para legibilidad */
+    background-color: white; /* Fondo sólido para el contenido */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    position: relative; /* Para decoraciones internas */
+}
+
+/* Decoración de puntos en las secciones */
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: #ffb6c1;
+    border-radius: 5px;
+}
+
+.highlight-text {
+    background-color: #ffe0e9; /* Fondo rosa para destacar */
+    padding: 15px;
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: bold;
+    margin-top: 20px;
+    color: #c2185b;
+    text-align: center;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Misión/Visión */
+.flex-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.mission-vision {
+    flex: 1;
+    background-color: #fff;
+    padding: 25px; /* Más padding */
+    border: 1px solid #ffb6c1;
+    border-radius: 12px; /* Más redondeado */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.mission-vision h4 {
+    color: #c2185b;
+    font-family: 'Quicksand', sans-serif; /* Cambiado a Quicksand */
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+
+/* Tarjetas (Objetivos y Canales) */
+.card-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.goals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.goal-card, .channel-card {
+    background-color: #fce4ec;
+    padding: 20px;
+    border-radius: 10px; /* Bordes más suaves */
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.goal-card:hover, .channel-card:hover {
+    transform: translateY(-5px);
+    background-color: #f8bbd0; /* Cambio de color al pasar el mouse */
+}
+
+.channels-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.channel-card h5 {
+    color: #c2185b;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif; /* Cambiado a Quicksand */
+    font-weight: 600;
+}
+.channel-card p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+
+/* Análisis DOFA */
+.dofa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dofa-card {
+    padding: 25px; /* Más padding */
+    border-radius: 12px; /* Más redondeado */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dofa-card h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.dofa-card ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+.dofa-card li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 25px; /* Espacio para el ícono personalizado */
+}
+.dofa-card li::before {
+    content: '★'; /* Ícono de estrella */
+    position: absolute;
+    left: 0;
+    color: #ff9800; /* Naranja */
+    font-size: 1.1em;
+}
+
+.dofa-card.strength { background-color: #e8f5e9; border: 2px solid #4caf50; } /* Verde - Fortaleza */
+.dofa-card.weakness { background-color: #ffebee; border: 2px solid #f44336; } /* Rojo - Debilidad */
+.dofa-card.opportunity { background-color: #fff8e1; border: 2px solid #ff9800; } /* Naranja - Oportunidad */
+.dofa-card.threat { background-color: #f3e5f5; border: 2px solid #9c27b0; } /* Púrpura - Amenaza */
+
+/* Footer */
+footer {
+    background-color: #4e342e; /* Marrón Oscuro */
+    color: white;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 0.9em;
+    margin-top: 50px;
+    border-top-left-radius: 20px; /* Esquinas redondeadas */
+    border-top-right-radius: 20px;
+}
+
+/* ------------------------------------- */
+/* RESPONSIVE DESIGN (Adaptación a Móvil)*/
+/* ------------------------------------- */
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero {
+        padding: 80px 5%; /* Menos padding en móvil */
+    }
+    .hero h1 {
+        font-size: 2.2em; /* Ajuste de fuente */
+    }
+    .hero h2 {
+        font-size: 1.3em;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .dofa-grid {
+        grid-template-columns: 1fr; /* Una columna para DOFA en móvil */
+    }
+    .goals-grid, .channels-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Ocultar decoraciones en pantallas muy pequeñas para no saturar */
+    .hero::before, .hero::after {
+        display: none;
+    }
+}
+
+/* Pequeño ajuste para pantallas más grandes de lo normal, si aplica */
+@media (min-width: 1200px) {
+    .content-section {
+        max-width: 1100px;
+    }
+}

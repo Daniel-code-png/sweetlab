@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWEETLAB | Repostería Artesanal</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Importar fuente moderna y legible */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce4ec; /* Fondo Rosa Pastel Suave */
+        }
+        
+        /* ---------------------------------- */
+        /* PALETA DE COLORES SWEETLAB (PINK)  */
+        /* ---------------------------------- */
+        .color-primary {
+            background-color: #E91E63; /* Deep Pink (Rosa Principal) */
+        }
+        .color-primary-hover:hover {
+            background-color: #C2185B; /* Darker Pink */
+        }
+        .text-primary {
+            color: #E91E63;
+        }
+        
+        /* Patrón de fondo de puntos/sprinkles para la sección hero */
+        .sweet-pattern-bg {
+            background-color: #FFE4E1; /* Misty Rose, muy claro */
+            /* Patrón de puntos/cuadrados sutiles */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23ffc0cb' fill-opacity='0.6'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0zm4 4h4v4H4z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 80px 80px;
+            background-repeat: repeat;
+            background-position: center center;
+            opacity: 0.95; /* Suave, pero visible */
+        }
+        
+        /* Estilos específicos para la DOFA (con puntos) */
+        .dofa-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .dofa-card ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+        }
+        .dofa-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .dofa-card li::before {
+            content: '•'; /* Ícono de punto */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #E91E63; 
+        }
+        
+        @media (max-width: 640px) {
+            .dofa-grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <h1 class="text-xl sm:text-3xl font-extrabold text-primary flex items-center">
+                <span role="img" aria-label="Pastel" class="mr-2 text-3xl sm:text-4xl">🍰</span>
+                SWEETLAB | Repostería Artesanal
+            </h1>
+            
+            </div>
+    </header>
+
+    <section id="inicio" class="sweet-pattern-bg py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h2 class="text-4xl md:text-7xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Un sabor por cada antojo.
+            </h2>
+            <p class="text-lg md:text-2xl text-gray-600 mb-6 max-w-3xl mx-auto">
+                SWEETLAB empezó hace 2 años tras la idea de innovar nuevas formas y sabores. En cada postre ponemos esa pizca de alegría y amor.
+            </p>
+            <p class="text-sm italic text-gray-700 mb-10 max-w-4xl mx-auto">
+                Equipo SWEETLAB: BRIANA RONDON, SHARIK PAZ, EMELY USMA, SEBASTIAN GONZALEZ, JUAN CAMILO Q, ALAN GARCIA, JEIDY MΕΝΑ, SALOME PARRA, JUAN JOSE SOLIS.
+            </p>
+            
+            <a href="#pedidos" class="inline-flex items-center justify-center color-primary color-primary-hover text-white text-xl font-bold px-8 py-4 rounded-xl shadow-2xl shadow-pink-400/50 transition duration-500 transform hover:scale-105 hover:shadow-pink-500/70">
+                <span role="img" aria-label="Bolsa de compras" class="mr-3">🛍️</span>
+                ¡Explora Nuestros Canales de Venta!
+            </a>
+        </div>
+    </section>
+
+    <section id="propuesta" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <span class="text-sm font-semibold uppercase tracking-wider text-primary">Nuestra Identidad</span>
+            <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-8 text-center">
+                Propuesta de Valor y el Negocio
+            </h3>
+            
+            <div class="mb-12 p-6 sm:p-8 bg-pink-50 border-l-4 border-primary rounded-xl shadow-md">
+                <div class="text-center">
+                    <h4 class="text-xl sm:text-2xl font-semibold text-primary mb-3">
+                        CREAMOS POSTRES QUE NO SOLO SABEN BIEN, SINO QUE CUENTAN HISTORIAS:
+                    </h4>
+                    <p class="text-gray-700 text-base sm:text-lg italic mb-4">
+                        "ENDULZAMOS TUS MOMENTOS MÁS IMPORTANTES CON SABOR REAL, TRADICIÓN Y UN TOQUE DE MAGIA."
+                    </p>
+                    <p class="text-base text-gray-900 mt-4 font-medium max-w-3xl mx-auto">
+                        El negocio consiste en la fabricación y comercialización de postres artesanales de alta calidad con ingredientes frescos y seleccionados, implementando así malteadas y ampliando el menú para nuestros clientes.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 sm:gap-12">
+                
+                <div class="md:w-1/2 w-full p-6 sm:p-8 bg-gray-50 rounded-2xl shadow-lg border-t-4 border-pink-300">
+                    <span role="img" aria-label="Bandera" class="text-3xl mb-3 block text-center">🎯</span>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-primary mb-3 text-center">MISIÓN</h4>
+                    <p class="text-gray-700 text-base sm:text-lg">
+                        Ofrecer postres innovadores y deliciosos de todos los sabores, elaborados con ingredientes de calidad alta que brinden una experiencia única para cada gusto e inolvidables para cada momento.
+                    </p>
+                </div>
+                
+                <div class="md:w-1/2 w-full p-6 sm:p-8 bg-gray-50 rounded-2xl shadow-lg border-t-4 border-pink-300">
+                    <span role="img" aria-label="Cohete" class="text-3xl mb-3 block text-center">🚀</span>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-primary mb-3 text-center">VISIÓN 2030</h4>
+                    <p class="text-gray-700 text-base sm:text-lg">
+                        SWEETLAB para el 2030 tendrá puntos de venta en Jardín Plaza, Unicentro y Mall Plaza estableciéndonos como empresa líder en la industria repostera gracias a nuestra creatividad, innovación y calidad artesanal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="compromiso" class="py-16 md:py-24 bg-pink-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-sm font-semibold uppercase tracking-wider text-primary">Nuestra Proyección</span>
+            <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-8">
+                Mejora Continua y Presencia de Marca
+            </h3>
+            <div class="p-6 sm:p-8 bg-white rounded-2xl shadow-xl border-b-4 border-pink-400">
+                <p class="text-gray-700 text-base sm:text-lg font-medium">
+                    Para mejorar, SWEETLAB está recibiendo talleres y ofreciendo atención al cliente por medio de redes sociales para mantenerse en contacto con sus clientes. Además, participa en eventos donde la marca se da a conocer mucho más.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="analisis" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-10">Análisis Estratégico</h3>
+
+            <h4 class="text-2xl font-bold text-gray-800 mb-6 text-primary">Objetivos Estratégicos</h4>
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-16">
+                
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow-lg border-b-4 border-pink-200 transition duration-300 hover:shadow-xl hover:translate-y-[-3px]">
+                    <p class="text-gray-800 text-sm sm:text-base font-semibold">Generar empleo y crecimiento local.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow-lg border-b-4 border-pink-200 transition duration-300 hover:shadow-xl hover:translate-y-[-3px]">
+                    <p class="text-gray-800 text-sm sm:text-base font-semibold">Apertura de nuevos puntos de venta.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow-lg border-b-4 border-pink-200 transition duration-300 hover:shadow-xl hover:translate-y-[-3px]">
+                    <p class="text-gray-800 text-sm sm:text-base font-semibold">Implementar prácticas sostenibles.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow-lg border-b-4 border-pink-200 transition duration-300 hover:shadow-xl hover:translate-y-[-3px]">
+                    <p class="text-gray-800 text-sm sm:text-base font-semibold">Aumentar el marketing y participación en eventos.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow-lg border-b-4 border-pink-200 transition duration-300 hover:shadow-xl hover:translate-y-[-3px]">
+                    <p class="text-gray-800 text-sm sm:text-base font-semibold">Mayor presencia en redes sociales.</p>
+                </div>
+            </div>
+
+            <h4 class="text-2xl font-bold text-gray-800 mb-6 text-primary">Análisis DOFA</h4>
+            
+            <div class="dofa-grid grid gap-4 sm:gap-8">
+                
+                <div class="dofa-card p-6 rounded-xl shadow-lg bg-green-100 border-t-4 border-green-500">
+                    <h4 class="text-xl font-semibold mb-3 text-green-700">FORTALEZAS</h4>
+                    <ul>
+                        <li>Sabor y Calidad del Producto.</li>
+                        <li>Experiencia de Compra Agradable.</li>
+                        <li>Buena Presentación.</li>
+                        <li>Alianzas y Eventos.</li>
+                    </ul>
+                </div>
+
+                <div class="dofa-card p-6 rounded-xl shadow-lg bg-red-100 border-t-4 border-red-500">
+                    <h4 class="text-xl font-semibold mb-3 text-red-700">DEBILIDADES</h4>
+                    <ul>
+                        <li>Alta Dependencia del Producto Fresco.</li>
+                        <li>Riesgo de Perder Calidad al Aumentar Producción.</li>
+                        <li>Mercado Saturado (Bastante Competencia).</li>
+                    </ul>
+                </div>
+
+                <div class="dofa-card p-6 rounded-xl shadow-lg bg-yellow-100 border-t-4 border-yellow-500">
+                    <h4 class="text-xl font-semibold mb-3 text-yellow-700">OPORTUNIDADES</h4>
+                    <ul>
+                        <li>Aumento en la Demanda por Productos Artesanales.</li>
+                        <li>Innovación de Sabores y Formatos.</li>
+                    </ul>
+                </div>
+
+                <div class="dofa-card p-6 rounded-xl shadow-lg bg-purple-100 border-t-4 border-purple-500">
+                    <h4 class="text-xl font-semibold mb-3 text-purple-700">AMENAZAS</h4>
+                    <ul>
+                        <li>Las Empresas Grandes que Ofrecen Productos Similares.</li>
+                        <li>Nuevas Empresas de Repostería.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+    <section id="pedidos" class="py-16 md:py-24 bg-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Canales de Distribución y Pedidos</h3>
+                <p class="text-lg sm:text-xl text-gray-600">Estrategias para tu venta constante y alcance.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 sm:gap-12">
+                
+                <div class="lg:w-2/3 w-full p-6 sm:p-8 bg-white rounded-2xl shadow-lg border-4 border-primary/30">
+                    <h4 class="text-2xl font-semibold text-primary mb-4 text-center">Nuestros Canales de Venta</h4>
+                    <p class="text-gray-700 mb-6 text-center">SWEETLAB cuenta con estrategias para su venta constante donde sea de agrado para nuestros futuros clientes junto con precios adecuados para su compra:</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="p-4 bg-gray-50 rounded-lg shadow text-center transition hover:shadow-xl">
+                            <span role="img" aria-label="Teléfono" class="text-3xl mb-2 block">📱</span>
+                            <h5 class="font-bold text-gray-800">App Propia</h5>
+                            <p class="text-sm text-gray-500">Una App que obtenga todos los productos con sus respectivos precios.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg shadow text-center transition hover:shadow-xl">
+                            <span role="img" aria-label="Red Social" class="text-3xl mb-2 block">💬</span>
+                            <h5 class="font-bold text-gray-800">Redes Sociales</h5>
+                            <p class="text-sm text-gray-500">Uso de redes sociales para contacto y ventas.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg shadow text-center transition hover:shadow-xl">
+                            <span role="img" aria-label="Moto" class="text-3xl mb-2 block">🛵</span>
+                            <h5 class="font-bold text-gray-800">Domicilios</h5>
+                            <p class="text-sm text-gray-500">Uso de domicilios nacionales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 w-full p-6 sm:p-8 bg-white rounded-2xl shadow-lg">
+                    <span role="img" aria-label="Clientes" class="text-4xl mb-3 block text-center">👨‍👩‍👧‍👦</span>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-primary mb-2 text-center">Segmentación de Clientes</h4>
+                    <p class="text-base sm:text-lg text-gray-700">
+                        SWEETLAB se enfoca en incluir a todas las personas amantes de lo natural y lo hecho en casa.
+                    </p>
+                    <p class="text-base sm:text-lg font-medium text-gray-800 mt-4">
+                        Nuestros clientes son de extracto 3 en adelante.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-base sm:text-lg mb-4 italic">
+                "Nada nos alegra más que ver nuestros postres en tus momentos especiales. Gracias por hacernos parte de tus celebraciones y por permitirnos compartir lo que más amamos hacer."
+            </p>
+            <p class="text-sm text-gray-400">
+                © 2024 SWEETLAB. ¡MUCHAS GRACIAS!
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
